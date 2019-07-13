@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Neo Vasudeva</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav class="navbar navbar-fixed-top" id="change_nav" onscroll="change()">
+      <div class="container-fluid">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+         </div>
+         <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+               <li><a href="#home"><span class="navwords">Home</span></a></li>
+               <li><a href="#about"><span class="navwords">About</span></a></li>
+               <li><a href="#projects"><span class="navwords">Projects</span></a></li>
+               <li><a href="#videos"><span class="navwords">Videos</span></a></li>
+               <li><a href="#contact"><span class="navwords">Contact</span></a></li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+   <!-- jumbotron header -->
+   <div class="jumbotron" id="home">
+      <div class="container">
+         <br><br><br><br>
+         <div class="row">
+            <div class="col-xs-4"></div>
+            <div class="col-xs-5">
+               <h1><span class="fade" id="name">N E O<br>V A S U D E V A</span></h1>
+               <br>
+               <p class="fade"> Building applications bracket by bracket.
+                  <br>
+                  Filming life frame by frame. </p>
+            </div>
+            <div class="col-xs-3"></div>
+         </div>
+         <br><br><br><br><br>
+         <div class="row">
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4 text-center">
+               <img src="images/arrow.png" alt="lol it broke">
+            </div>
+            <div class="col-xs-4"></div>
+         </div>
+         <br><br>
+      </div>
+   </div>
+
+   <!-- About -->
+   <div class="container" id="about">
+      <div class="row">
+         <div class="col-sm-12 text-center">
+            <div class="page-header">
+               <h1><span class="header-white">About</span></h1>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-sm-6 text-center">
+            <span class="helper"><img id="image" src="images/neo.JPG"></span>
+         </div>
+         <div class="col-sm-6 text-center">
+            <br>
+            <p class="helper text-format">
+               I'm a super curious guy who wants to know how technology works.
+               This page is a chronicle of my adventures into this colorful world.
+               <br>
+               <br>
+               Other than my adventures into the tech realm, I also film the planet.
+               You could say I'm kind of a nature freak.
+            </p>
+         </div>
+         <br>
+      </div>
+      <div class="row">
+         <div class="col-sm-12">
+            <br><br>
+         </div>
+      </div>
+   </div>
+
+   <!-- Projects -->
+   <div class="container-fluid section-header" id="projects">
+      <div class="row">
+         <div class="col-sm-12 text-center">
+            <h1 class="header-black"> Projects </h1>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12 text-center">
+               <h2 id="github"><a href="https://github.com/neovasudeva"> View My Github </a></h2>
+         </div>
+      </div>
+   </div>
+
+   <!-- Videos -->
+   <div class="container-fluid section-header" id="videos">
+      <div class="row">
+         <div class="col-sm-12 text-center">
+            <h1 class="header-black"> Videos </h1>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12 text-center">
+         </div>
+      </div>
+   </div>
+
+   <!-- Contact -->
+   <div class="container-fluid" id="contact">
+      <div class="row">
+         <div class="col-sm-12 text-center">
+            <br>
+            <h1> Stay Connected </h1>
+         </div>
+      </div>
+      <div class="row text-center">
+         <div class="col-sm-3"></div>
+         <div class="col-sm-1"><a href="https://www.facebook.com/neo.vasudeva">
+            <img src="images/facebook.png">
+         </a></div>
+         <div class="col-sm-1"><a href="https://www.youtube.com/channel/UCuLTxSCRDoEyUVeG4jYgTPQ">
+            <img src="images/youtube.png">
+         </a></div>
+         <div class="col-sm-1"><a href="https://www.instagram.com/neo.vasudeva/">
+            <img src="images/insta.png">
+         </a></div>
+         <div class="col-sm-1"><a href="https://www.linkedin.com/in/neo-vasudeva-036882154">
+            <img src="images/linkedin.png">
+         </a></div>
+         <div class="col-sm-1"><a href="https://github.com/neovasudeva">
+            <img src="images/git.png">
+         </a></div>
+         <div class="col-sm-1"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <img src="images/meme.png">
+         </a></div>
+         <div class="col-sm-3"></div>
+      </div>
+      <div class="row">
+         <div class="col-sm-12"> <br> </div>
+      </div>
+   </div>
+
+   <!-- script -->
+   <script>
+      $(function () {
+         $(document).scroll(function () {
+           var $nav = $(".navbar-fixed-top");
+           $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+         });
+      });
+   </script>
+</body>
+</html>
