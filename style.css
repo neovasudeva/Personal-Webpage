@@ -1,4 +1,3 @@
-/* fade in material */
 .fade {
    opacity: 1;
    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
