@@ -5,14 +5,18 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
+   <script src="https://github.com/tengbao/vanta/blob/master/vendor/three.r95.min.js"></script>
+   <script src="https://www.vantajs.com/dist/vanta.net.min.js"></script>
 </head>
 <body>
 
    <!-- Navbar -->
-   <nav class="navbar navbar-fixed-top" id="change_nav" onscroll="change()">
+   <nav class="navbar navbar-fixed-top" id="navbar">
       <div class="container-fluid">
          <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -38,18 +42,19 @@
    <div class="jumbotron" id="home">
       <div class="container">
          <br><br><br><br>
+         <br><br><br><br>
          <div class="row">
-            <div class="col-xs-3"></div>
-            <div class="col-xs-8">
+            <div class="col-xs-12 text-center">
                <h1><span class="fade" id="name">N E O<br>V A S U D E V A</span></h1>
                <br>
-               <p class="fade">Building applications bracket by bracket.
-                  <br>
-                  Filming life frame by frame.
+               <p class="fade">
+                  <span style="color: #48c38b">Student.</span>
+                  <span style="color: #1e92f1">Developer.</span>
+                  <span style="color: #c8703c">Editor.</span>
                </p>
             </div>
-            <div class="col-xs-1"></div>
          </div>
+         <br><br><br><br><br>
          <br><br><br><br><br>
          <div class="row">
             <div class="col-xs-4"></div>
@@ -73,18 +78,17 @@
       </div>
       <div class="row">
          <div class="col-sm-6 text-center">
-            <span class="helper"><img id="image" src="images/neo.JPG"></span>
+            <img id="image" src="images/neo.JPG">
          </div>
          <div class="col-sm-6 text-center">
             <br>
             <p class="helper text-format">
-               Hey, I'm a geek that loves tech. As a sophomore Computer Engineering major at
-               the University of Illinois Urbana Champaign, I can safely say even heaven isn't better than
-               the labs here. We all have favorites though and mine are Machine Learning
-               and Quantum Computing.
-               <br><br>
-               Outside of class though, I play badminton. I'm also a bit of an aesthetic nature
-               freak, so I occasionally go out to get some awesome drone shots.
+               <span style="font-weight: bold;">Major:</span> Computer Engineering<br>
+               <span style="font-weight: bold;">Education:</span> UIUC<br>
+               <span style="font-weight: bold;">Location:</span> Charlotte, NC / Champaign, IL<br>
+               <br>
+               Heyo! I'm a junior at UIUC with interests in ML, parallel computing, and embedded systems. In my
+               free time, I play badminton and take ariel shots with my drone.
             </p>
          </div>
          <br>
@@ -106,6 +110,11 @@
    </div>
    <div class="container">
       <div class="row">
+         <div class="col-sm-12 text-center">
+            insert react components here
+         </div>
+      </div>
+      <div class="row">
          <div class="col-sm-2"></div>
          <div class="col-sm-4 text-center">
                <h2 id="github"><a href="https://www.linkedin.com/in/neo-vasudeva-036882154"> View My LinkedIn </a></h2>
@@ -126,6 +135,11 @@
       </div>
    </div>
    <div class="container">
+      <div class="row">
+         <div class="col-sm-12 text-center">
+            insert react components here
+         </div>
+      </div>
       <div class="row">
          <div class="col-sm-12 text-center">
                <h2 id="github"><a href="https://github.com/neovasudeva"> View My Github </a></h2>
@@ -157,67 +171,42 @@
          </div>
       </div>
       <div class="row text-center">
-         <div class="col-sm-3"></div>
-         <div class="col-sm-1"><a href="https://www.facebook.com/neo.vasudeva">
-            <img src="images/facebook.png">
+         <div class="col-xs-2"></div>
+         <div class="col-xs-2"><a href="https://www.facebook.com/neo.vasudeva">
+            <img id="social" src="images/facebook.png">
          </a></div>
-         <div class="col-sm-1"><a href="https://www.youtube.com/channel/UCuLTxSCRDoEyUVeG4jYgTPQ">
-            <img src="images/youtube.png">
+         <div class="col-xs-2"><a href="https://www.instagram.com/neo.vasudeva/">
+            <img id="social" src="images/insta.png">
          </a></div>
-         <div class="col-sm-1"><a href="https://www.instagram.com/neo.vasudeva/">
-            <img src="images/insta.png">
+         <div class="col-xs-2"><a href="https://www.linkedin.com/in/neo-vasudeva-036882154">
+            <img id="social" src="images/linkedin.png">
          </a></div>
-         <div class="col-sm-1"><a href="https://www.linkedin.com/in/neo-vasudeva-036882154">
-            <img src="images/linkedin.png">
+         <div class="col-xs-2"><a href="https://github.com/neovasudeva">
+            <img id="social" src="images/git.png">
          </a></div>
-         <div class="col-sm-1"><a href="https://github.com/neovasudeva">
-            <img src="images/git.png">
-         </a></div>
-         <div class="col-sm-1"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-            <img src="images/meme.png">
-         </a></div>
-         <div class="col-sm-3"></div>
+         <div class="col-xs-2"></div>
       </div>
       <div class="row">
          <div class="col-sm-12"> <br> </div>
       </div>
    </div>
-
-   <!-- script -->
+  
+   <!-- Vanta.js Scripts -->
    <script>
-      $(function () {
-         $(document).scroll(function () {
-           var $nav = $(".navbar-fixed-top");
-           $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-         });
-      });
-
-      $(document).ready(function(){
-         // Add scrollspy to <body>
-         $('body').scrollspy({target: ".navbar", offset: 50});
-
-         // Add smooth scrolling on all links inside the navbar
-         $("#myNavbar a").on('click', function(event) {
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 800, function(){
-
-              // Add hash (#) to URL when done scrolling (default click behavior)
-              window.location.hash = hash;
-            });
-            }  // End if
-         });
-   });
+      VANTA.NET({
+         el: "#home",
+         mouseControls: true,
+         touchControls: true,
+         minHeight: 200.00,
+         minWidth: 200.00,
+         scale: 1.00,
+         scaleMobile: 1.00,
+         color: 0x3f3fff,
+         backgroundColor: 0x0,
+         points: 8.00,
+         maxDistance: 22.00,
+         spacing: 20.00
+      })
    </script>
 </body>
 </html>

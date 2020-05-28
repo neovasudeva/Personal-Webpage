@@ -36,6 +36,7 @@
     to   { opacity: 1; }
 }
 
+/* Landing */
 .jumbotron {
    clip-path: polygon(
       0 0,
@@ -47,40 +48,46 @@
    color: white;
 }
 
-.icon-bar {
-   background-color: white !important;
-}
-
-.navbar-fixed-top.scrolled {
-   background-color: black;
-   transition: background-color 200ms linear;
-}
-
-.navbar-fixed-top.scrolled .nav-link {
-   background-color: #ffffff00;
-}
-
-.navwords {
-   color: white;
-   font-size: 2.5vmin;
-}
-
 #name {
-   font-size: 4.5vw;
+   font-size: 5vmax;
 }
 
 #about {
    padding: 20px;
 }
 
+/* navbar */
+.icon-bar {
+   background-color: white !important;
+}
+
+.navwords {
+   color: white;
+   font-size: 2rem;
+}
+
+#navbar {
+   background-color: black;
+}
+
+/* about */
 #image {
    border-radius: 50%;
    border-radius: 50%;
-   height: 50vmin;
-   width: 50vmin;
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: contain;
    padding: 20px;
 }
 
+/* contact */
+#social {
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: contain;
+}
+
+/* general section titles */
 .header-white {
    font-size: 10vmin;
    padding: 10px;
@@ -94,7 +101,7 @@
 }
 
 .helper {
-   font-size: 3.5vmin;
+   font-size: 3rem;
 }
 
 .section-header {
@@ -119,3 +126,5 @@
    color: lightblue;
    text-decoration: underline;
 }
+
+
