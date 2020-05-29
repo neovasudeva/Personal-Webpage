@@ -4,10 +4,12 @@
    <title>Neo Vasudeva</title>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
+
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-   <link rel="stylesheet" type="text/css" href="css/style.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+   <link rel="stylesheet" type="text/css" href="css/style.css">
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
    <script src="https://github.com/tengbao/vanta/blob/master/vendor/three.r95.min.js"></script>
@@ -41,24 +43,23 @@
    <!-- jumbotron header -->
    <div class="jumbotron" id="home">
       <div class="container">
-         <br><br><br><br>
-         <br><br><br><br>
          <div class="row">
             <div class="col-xs-12 text-center">
-               <h1><span class="fade" id="name">N E O<br>V A S U D E V A</span></h1>
-               <br>
-               <p class="fade">
-                  <span style="color: #48c38b">Student.</span>
-                  <span style="color: #1e92f1">Developer.</span>
-                  <span style="color: #c8703c">Editor.</span>
-               </p>
+               <div id="valign1">
+                  <h1><span id="name">N E O<br>V A S U D E V A</span></h1>
+               </div>
+               <div id="valign2">
+                  <p>
+                     <span style="color: #48c38b">Student. </span>
+                     <span style="color: #1e92f1">Developer. </span>
+                     <span style="color: #c8703c">Editor. </span>
+                  </p>
+               </div>
             </div>
          </div>
-         <br><br><br><br><br>
-         <br><br><br><br><br>
          <div class="row">
             <div class="col-xs-4"></div>
-            <div class="col-xs-4 text-center">
+            <div class="col-xs-4 text-center" id="arrow">
                <img src="images/arrow.png" alt="lol it broke">
             </div>
             <div class="col-xs-4"></div>
@@ -193,7 +194,11 @@
   
    <!-- Vanta.js Scripts -->
    <script>
-      VANTA.NET({
+      // starting color
+      let col = 0xff0000;
+      
+      // effect
+      let effect = VANTA.NET({
          el: "#home",
          mouseControls: true,
          touchControls: true,
@@ -201,12 +206,79 @@
          minWidth: 200.00,
          scale: 1.00,
          scaleMobile: 1.00,
-         color: 0x3f3fff,
+         color: 0x4d4d4d,
          backgroundColor: 0x0,
          points: 8.00,
          maxDistance: 22.00,
          spacing: 20.00
       })
+
+      // function to update RGB vals of effect
+      let stage = 1;
+      function updateColor() {
+         // red
+         if (stage == 1) {
+            col += 0x000100;
+            effect.setOptions({
+               color: col
+            })
+            if (col == 0xffff00) 
+               stage = 2;
+         } 
+         
+         // yellow
+         else if (stage == 2) {
+            col -= 0x010000;
+            effect.setOptions({
+               color: col,
+            })
+            if (col == 0x00ff00)
+               stage = 3;
+         } 
+         
+         // green
+         else if (stage == 3) {
+            col += 0x000001;
+            effect.setOptions({
+               color: col,
+            })
+            if (col == 0x00ffff)
+               stage = 4;
+         } 
+         
+         // cyan
+         else if (stage == 4) {
+            col -= 0x000100;
+            effect.setOptions({
+               color: col,
+            })
+            if (col == 0x0000ff)
+               stage = 5;
+         } 
+         
+         // blue  
+         else if (stage == 5) {
+            col += 0x010000;
+            effect.setOptions({
+               color: col,
+            })
+            if (col == 0xff00ff)
+               stage = 6;
+         } 
+         
+         // magenta
+         else if (stage == 6) {
+            col -= 0x000001;
+            effect.setOptions({
+               color: col,
+            })
+            if (col == 0xff0000)
+               stage = 1;
+         }
+      };
+
+      // Update color through RGB color wheel
+      setInterval(updateColor, 25);
    </script>
 </body>
 </html>

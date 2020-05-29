@@ -38,14 +38,31 @@
 
 /* Landing */
 .jumbotron {
+   /*
    clip-path: polygon(
       0 0,
       100% 0,
       100% 100%,
       0 calc(100% - 5vw)
    );
+   */
    background-color: black;
    color: white;
+   height: 100vh;
+}
+
+#valign1 {
+   height: 45vh;
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+}
+
+#valign2 {
+   height: 35vh;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
 }
 
 #name {
